@@ -24,7 +24,7 @@ export default function Todos() {
   const deleteTodo = async (id) => {
     console.log(id);
     try {
-      const response = await fetch(`http://localhost:4000/api/todos/${id}`, {
+      const response = await fetch(`https://full-stack-todo-app-weld.vercel.app/api/todos/${id}`, {
         method: "delete",
       });
       console.log(response);
@@ -43,7 +43,7 @@ export default function Todos() {
   useEffect(() => {
     const fetchtodos = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/getTodos");
+        const response = await fetch("https://full-stack-todo-app-weld.vercel.app/api/getTodos");
         const data = await response.json();
         setTodos(data);
         setCount(data.length);
@@ -56,7 +56,7 @@ export default function Todos() {
 
   const fetchTodoByid = async (id) => {
     const response = await fetch(
-      `http://localhost:4000/api/getTodoById/${id}`,
+      `https://full-stack-todo-app-weld.vercel.app/api/getTodoById/${id}`,
       { method: "get" }
     );
     const data = await response.json();
@@ -75,7 +75,7 @@ export default function Todos() {
       console.log("updatetodo se hu", todo);
       console.log("updatetodo se hu", id);
       const response = await fetch(
-        `http://localhost:4000/api/updateTodo/${id}`,
+        `https://full-stack-todo-app-weld.vercel.app/api/updateTodo/${id}`,
         {
           method: "post",
           headers: {
@@ -105,7 +105,7 @@ export default function Todos() {
   //   console.log(id);
   //   try {
   //     const response = await axios.post(
-  //       `http://localhost:4000/api/updateTodo/${id}`,todo
+  //       `https://full-stack-todo-app-weld.vercel.app/api/updateTodo/${id}`,todo
   //     );
   //     // console.log("Success:", response.data);
 

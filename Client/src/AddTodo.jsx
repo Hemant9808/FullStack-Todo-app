@@ -20,7 +20,7 @@ export default function AddTodo() {
     const todo = { title, description };
 
     try {
-      const response = await axios.post("http://localhost:4000/api/todo", todo);
+      const response = await axios.post("https://full-stack-todo-app-weld.vercel.app/api/todo", todo);
       console.log("Success:", response.data);
 
       alert("To-Do added successfully!");
